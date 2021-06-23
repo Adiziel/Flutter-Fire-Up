@@ -1,6 +1,6 @@
 {
-    "name": "catlog_app",
-    "short_name": "catlog_app",
+    "name": "catalog_app",
+    "short_name": "catalog_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

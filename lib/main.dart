@@ -1,4 +1,4 @@
-import 'package:catlog_app/pages/login.dart';
+import 'package:catalog_app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home.dart';
