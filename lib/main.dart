@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         // primaryTextTheme: GoogleFonts.poppinsTextTheme(),
       ),
       // home: HomePage()
+      initialRoute: Myroutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
         Myroutes.homeRoute: (context) => HomePage(),
