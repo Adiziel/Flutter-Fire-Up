@@ -1,5 +1,6 @@
 import 'package:catalog_app/pages/login.dart';
 import 'package:catalog_app/utils/routes.dart';
+import 'package:catalog_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home.dart';
@@ -16,11 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        // primaryTextTheme: GoogleFonts.poppinsTextTheme(),
-      ),
+      theme: MyThemes.lightTheme(context),
+      darkTheme: MyThemes.darkTheme(context),
       // home: HomePage()
       initialRoute: Myroutes.homeRoute,
       routes: {
