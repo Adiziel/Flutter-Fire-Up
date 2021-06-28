@@ -16,6 +16,6 @@ class MyThemes {
       ThemeData(brightness: Brightness.dark);
 
   //Colors
-  static Color doomsickColor = Color(0xFFF3EFEFf);
-  static Color darkbluish = Color(0xff403b58);
+  static Color creamColor = Colors.yellow.shade50;
+  static Color darkBluishColor = Color(0xff403b58);
 }
