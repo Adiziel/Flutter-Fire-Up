@@ -121,13 +121,9 @@ class CatalogItem extends StatelessWidget {
                   onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
-                    MyThemes.darkbluish,
-                  ),
-                  shape: MaterialStateProperty.all(
-                    StadiumBorder()
-                  )
-                  ),
-                  
+                        MyThemes.darkbluish,
+                      ),
+                      shape: MaterialStateProperty.all(StadiumBorder())),
                   child: "Buy".text.make(),
                 )
               ],
