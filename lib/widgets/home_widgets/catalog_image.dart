@@ -12,10 +12,10 @@ class CatalogImage extends StatelessWidget {
     return Image.network(image)
         .box
         .rounded
-        .p8
-        .color(MyThemes.creamColor)
+        .p12
+        .color(context.theme.canvasColor)
         .make()
-        .py16()
+        .p16()
         .w40(context);
   }
 }
