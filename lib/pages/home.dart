@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'package:catalog_app/utils/routes.dart';
 import 'package:catalog_app/widgets/home_widgets/catalog_header.dart';
 import 'package:catalog_app/widgets/home_widgets/catalog_list.dart';
 import 'package:catalog_app/widgets/themes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -42,22 +44,27 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: Container(
-        padding: Vx.m32,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CatalogHeader(),
-            if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-              CatalogList().expand()
-            else
-              Center(
-                child: CircularProgressIndicator(),
-              )
-          ],
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context, Myroutes.cartRoute),
+          backgroundColor: MyThemes.darkBluishColor,
+          child: Icon(CupertinoIcons.cart),
         ),
-      ),
-    ));
+        body: SafeArea(
+          child: Container(
+            padding: Vx.m32,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CatalogHeader(),
+                if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                  CatalogList().expand()
+                else
+                  Center(
+                    child: CircularProgressIndicator(),
+                  )
+              ],
+            ),
+          ),
+        ));
   }
 }
